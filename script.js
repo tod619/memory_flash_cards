@@ -151,3 +151,10 @@ addCardBtn.addEventListener('click', () => {
         setCardsData(cardsData)
     }
 })
+
+// clear all cards from local storage button
+clearBtn.addEventListener('click', () => {
+    localStorage.clear()
+    cardsContainer.innerHTML = ''
+    window.location.reload()
+})
