@@ -134,3 +134,21 @@ h1 button {
   color: #ddd;
 }
 /* End: Cards */
+
+/* Start: Navigation */
+.navigation {
+  display: flex;
+  margin: 20px 0;
+}
+
+.navigation .nav-button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navigation p {
+  margin: 0 25px;
+}
+/* End: Navigation */
