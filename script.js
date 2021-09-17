@@ -58,6 +58,10 @@ function createCard(data,index) {
             </div>
     `
 
+    // Add event listner to flip card
+    card.addEventListener('click',() => card.classList.toggle('show-answer'))
+
+
     // Add to cardsEL 
     cardsEl.push(card)
 
