@@ -86,6 +86,12 @@ function getCardsData() {
     return cards === null ? [] : cards
 }
 
+// set card data in local storage
+function setCardsData(cards) {
+    localStorage.setItem('cards', JSON.stringify(cards))
+    window.location.reload()
+}
+
 createCards()
 
 // Event listners
@@ -125,3 +131,23 @@ showBtn.addEventListener('click', () => addContainer.classList.add('show'))
 
 // hide form button
 hideBtn.addEventListener('click', () => addContainer.classList.remove('show'))
+
+// add a new card to local storage
+addCardBtn.addEventListener('click', () => {
+    const question = questionEl.value
+    const answer = answerEl.value
+
+    if(question.trim() && answer.trim()) {
+        const newCard = { question, answer }
+
+        createCard(newCard)
+
+        questionEl.value = ''
+        answerEl.value = ''
+
+        addContainer.classList.remove('show')
+
+        cardsData.push(newCard)
+        setCardsData(cardsData)
+    }
+})
