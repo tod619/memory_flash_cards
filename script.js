@@ -1,0 +1,12 @@
+const cardsContainer = document.getElementById('cards-container')
+const prevButton = document.getElementById('prev')
+const nextButton = document.getElementById('next')
+const currentEl = document.getElementById('current')
+const showBtn = document.getElementById('show')
+const hideBtn = document.getElementById('hide')
+const questionEl = document.getElementById('question')
+const answerEl = document.getElementById('answer')
+const addCardBtn = document.getElementById('add-card')
+const clearBtn = document.getElementById('clear')
+const addContainer = document.getElementById('add-container')
+
