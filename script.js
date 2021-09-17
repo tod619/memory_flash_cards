@@ -83,11 +83,14 @@ function updateCurrentText() {
 // Get cards from local storage
 function getCardsData() {
     const cards = JSON.parse(localStorage.getItem('cards'))
+    return cards === null ? [] : cards
 }
 
 createCards()
 
 // Event listners
+
+// Next button
 nextButton.addEventListener('click', () => {
     cardsEl[currentActiveCard].className = 'card left'
 
@@ -102,7 +105,7 @@ nextButton.addEventListener('click', () => {
     updateCurrentText()
 })
 
-
+// previous button
 prevButton.addEventListener('click',() => {
     cardsEl[currentActiveCard].className = 'card right'
 
@@ -116,3 +119,9 @@ prevButton.addEventListener('click',() => {
 
     updateCurrentText()
 })
+
+// show form button
+showBtn.addEventListener('click', () => addContainer.classList.add('show'))
+
+// hide form button
+hideBtn.addEventListener('click', () => addContainer.classList.remove('show'))
